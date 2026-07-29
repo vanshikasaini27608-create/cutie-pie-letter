@@ -2,12 +2,67 @@
 <html>
 <head>
 <title>For Cutie Pie 🌻</title>
+
 <style>
 body {
   background: #fff8dc;
   font-family: cursive;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 25px;
+  animation: float 6s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Sparkles */
+.sparkle {
+  position: fixed;
+  color: gold;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* Envelope */
+.envelope {
+  width: 220px;
+  height: 140px;
+  background: #ffd6e7;
+  margin: 40px auto;
+  border-radius: 10px;
+  position: relative;
+  animation: open 2s forwards;
+}
+
+@keyframes open {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
 }
 
 h1 {
@@ -23,31 +78,48 @@ h1 {
   margin: auto;
 }
 
-.sunflower {
-  font-size: 50px;
-}
-<style>
-body {
-  background: #fff8dc;
-  font-family: cursive;
-  text-align: center;
-  padding: 40px;
+button {
+  background: #ffb6c1;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-body {
-  background: #fff8dc;
-  background-image: url("YOUR_IMAGE_LINK_HERE");
-  background-size: cover;
-  background-position: center;
-  font-family: cursive;
-  text-align: center;
-  padding: 40px;
+#surprise {
+  display: none;
+  font-size: 22px;
+  color: #e75480;
+  margin-top: 20px;
 }
+
+</style>
+</head>
+
+<body>
+
+<div class="envelope">💌</div>
+
+<div class="sparkle">✨</div>
+<div class="sparkle" style="right:20%;top:30%">✨</div>
+<div class="sparkle" style="left:20%;top:40%">✨</div>
+
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:50%">💗</div>
+<div class="heart" style="left:80%">💕</div>
+
+<h1>For My Cutie Pie 🌻</h1>
+
+<div class="letter">
+
+<p>Dear Cutie Pie,</p>
 
 <p>
-(Yeh letter mai bas tumhe yeh batane ke liye likh rahi hu ki tum mere liye kitne special ho😭🛐 Roz-roz hum baat karte hain par kabhi-kabhi feelings ko thoda special tarike se express karna chahiye☘️✨Sach batau toh I love that time jab hum sath hote haiii🫂🤍 Jab hum baith kar bohot saari baatein karte haii woh moments mere liye sabse best hote hain💗✨ Pata hi nahi chalta waqt kahan nikal jata hai🪐🎀 Jab se tum meri life mein aaye ho sab kuch badal gaya hai😙💌 Tumhari chhoti-chhoti baatein mujhe hasane ka tareeke aur jab mai pareshan hoti hu toh mujhe handle karna yeh sab mujhe tumse har din aur zyada pyaar karne par majboor kar deta hai.Mujhse bohot lada mat karo par haan tumhare alawa mai kisi aur se ladna bhi nahi chahti👾🫀 Thank you meri life ka sabse best part banne ke liye💟🫪 Mai har situation mein tumhara sath dene ke liye hamesha ready hu🌻✨🫪
+Yeh letter mein bas tumhe yeh batane ke liye likh rahi hu ki tu mere liye kitne special hai😭🛐 Roz-roz hum baat karte hain par kabhi-kabhi feelings ko thoda special tarike se express karna chahiye☘️✨Sach batau toh I love that time jab hum sath hote haiii🫂🤍 Jab hum baith kar bohot saari baatein karte haii woh moments mere liye sabse best hote hain💗✨ Pata hi nahi chalta waqt kahan nikal jata hai🪐🎀 Jab se tum meri life mein aaye ho sab kuch badal gaya hai😙💌 Tumhari chhoti-chhoti baatein mujhe hasane ka tareeke aur jab mai pareshan hoti hu toh mujhe handle karna yeh sab mujhe tumse har din aur zyada pyaar karne par majboor kar deta hai.Mujhse bohot lada mat karo par haan tumhare alawa mai kisi aur se ladna bhi nahi chahti👾🫀 Thank you meri life ka sabse best part banne ke liye💟🫪 Mai har situation mein tumhara sath dene ke liye hamesha ready hu🌻✨
 
-I love you so much, aur hamesha karti rahungi💋😭)
+I love you so much, aur hamesha karti rahungi💋🫠
 </p>
 
 <p>
@@ -55,7 +127,21 @@ With love,<br>
 Vanshika 💌
 </p>
 
+<button onclick="showSurprise()">
+Click for a surprise 💖
+</button>
+
+<p id="surprise">
+I love you more than words can say ❤️
+</p>
+
 </div>
+
+<script>
+function showSurprise(){
+ document.getElementById("surprise").style.display="block";
+}
+</script>
 
 </body>
 </html>
